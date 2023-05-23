@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="container">
+        <h1 class="shimmer-text">Google</h1>
+    </div>
+    <div class="search-container">
+        <form onsubmit="searchGoogle(event)">
+          <div class="search-box-container">
+            <input type="text" name="q" placeholder="Search in Google" class="search-box">
+            <button type="submit" class="search-button">
+              <img src="images/search-icon.png" alt="Search">
+            </button>
+          </div>
+        </form>
+      </div>
+    <div class="card">
+      <div class="search">
+        <input type="text" placeholder="enter city name" spellcheck="false">
+        <button><img src="images/search.png" alt=""></button>
+      </div>
+      <div class="error">
+        <p>Invalid City Name</p>
+      </div>
+      <div class="weather">
+        <img src="images/rain.png" class="weather-icon">
+        <h1 class="temp">22°c</h1>
+        <h2 class="city">Adityapur</h2>
+        <div class="details">
+          <div class="col">
+            <img src="images/humidity.png">
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/wind.png">
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card2">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="img_holder">
+              <img src="images/Amazon.png">
+            </div>
+          </div>
+          <a class="card-back" href="https://Amazon.in" target="_blank">Amazon</a>
+        </div>
+      </div>
+      <div class="card2">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="img_holder">
+              <img src="images/Chatgpt.png">
+            </div>
+          </div>
+          <a class="card-back" href="https://chat.openai.com" target="_blank">ChatGPT</a>
+        </div>
+      </div>
+      <div class="card2">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="img_holder">
+              <img src="images/Youtube.png">
+            </div>
+          </div>
+          <a class="card-back" href="https://youtube.com" target="_blank">Youtube</a>
+        </div>
+      </div>
+      <div class="card2">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="img_holder">
+              <img src="images/twitter.png">
+            </div>
+          </div>
+          <a class="card-back" href="https://Twitter.com" target="_blank">Twitter</a>
+        </div>
+      </div>
+      <div class="card2">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="img_holder">
+              <img src="images/gmail.png">
+            </div>
+          </div>
+          <a class="card-back" href="https://gmail.com" target="_blank">Gmail</a>
+        </div>
+      </div>
+      <div class="card2">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="img_holder">
+              <img src="images/wa-whatsapp-icon.png">
+            </div>
+          </div>
+          <a class="card-back" href="https://web.whatsapp.com" target="_blank">Whatsapp</a>
+        </div>
+      </div>
+      <div class="card2">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="img_holder">
+              <img src="images/facebook.png">
+            </div>
+          </div>
+          <a class="card-back" href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <div class="card2">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="img_holder">
+              <img src="images/instagram.png">
+            </div>
+          </div>
+          <a class="card-back" href="https://Instagram.com" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="widget-class">
+      <div class="date-container">
+        <span id="date"></span>
+      </div>
+      <div class="clock">
+        <div class="digital-date">
+          <i class="day">SUN</i>
+          <i class="colon"> : </i>
+          <i class="hours">20</i>
+          <i class="colon"> : </i>
+          <i class="minutes">30</i>
+          <i class="colon"> : </i>
+          <i class="seconds">50</i>
+          <i class="colon"> : </i>
+          <i class="daytime">AM</i>
+        </div>
+        <div class="hand" style="--clr:#3c83e0d5; --h:50px;" id="hour"><i></i></div>
+        <div class="hand" style="--clr:#f33f3f; --h:100px;" id="min"><i></i></div>
+        <div class="hand" style="--clr:#fff; --h:120px;" id="sec"><i></i></div>
+        <span style="--i:1;"><b>1</b></span>
+        <span style="--i:2;"><b>2</b></span>
+        <span style="--i:3;"><b>🤔</b></span>
+        <span style="--i:4;"><b>4</b></span>
+        <span style="--i:5;"><b>5</b></span>
+        <span style="--i:6;"><b>🤣</b></span>
+        <span style="--i:7;"><b>7</b></span>
+        <span style="--i:8;"><b>8</b></span>
+        <span style="--i:9;"><b>😀</b></span>
+        <span style="--i:10;"><b>10</b></span>
+        <span style="--i:11;"><b>11</b></span>
+        <span style="--i:12;"><b>😊</b></span>
+        
+    </div>
+
+    <script>
+
+      const apiKey = "0ee291f5cac7605870da5d5cd4189ebd";
+      const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+      const searchBox = document.querySelector(".search input");
+      const searchBtn = document.querySelector(".search button");
+      const weatherIcon = document.querySelector(".weather-icon")
+
+      async function getCity(){
+        const request = await fetch("https://ipinfo.io/json?token=4535404e50786b")
+        const data = await request.json()
+        console.log('City:', data.city);
+        return data.city
+      }
+    
+      async function checkWeather(city)
+      {
+        const response = await fetch(apiUrl + city + '&appid=' + apiKey);
+
+        if(response.status == "404"){
+          document.querySelector(".error").style.display = "block";
+          document.querySelector(".weather").style.display = "none";
+        }else{
+
+        var data = await response.json();
+
+        console.log(data);
+        document.querySelector(".city").innerHTML = data.name;
+        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + '°c';
+        document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+        document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+      
+        if(data.weather[0].main == "Clouds"){
+          weatherIcon.src = "images/clouds.png"
+        }
+        else if(data.weather[0].main == "Clear"){
+          weatherIcon.src = "images/clear.png"
+        }
+        else if(data.weather[0].main == "Rain"){
+          weatherIcon.src = "images/rain.png"
+        }
+        else if(data.weather[0].main == "Drizzle"){
+          weatherIcon.src = "images/drizzle.png"
+        }
+        else if(data.weather[0].main == "Mist"){
+          weatherIcon.src = "images/mist.png"
+        }
+        else if(data.weather[0].main == "Snow"){
+          weatherIcon.src = "images/snow.png"
+        }
+        else if(data.weather[0].main == "Haze"){
+          weatherIcon.src = "images/haze.png"
+        }
+
+        document.querySelector(".weather").style.display = "block";
+      
+      }
+    }
+      searchBtn.addEventListener("click", ()=>{
+        checkWeather(searchBox.value);
+      })
+      
+      document.addEventListener("DOMContentLoaded", async () => {
+      const city = await getCity();
+      checkWeather(city);
+      });
+    </script>
+
+    <script src="script.js"></script>
+
+    <script>
+      let hr = document.getElementById('hour');
+      let min = document.getElementById('min');
+      let sec = document.getElementById('sec');
+
+      function displayTime(){
+        let date = new Date()
+        let hh = date.getHours()
+        let mm = date.getMinutes()
+        let ss = date.getSeconds()
+
+        let hRotation = 30*hh + mm/2;
+        let mRotation = 6*mm;
+        let sRotation = 6*ss;
+
+        hr.style.transform = `rotate(${hRotation}deg)`;
+        min.style.transform = `rotate(${mRotation}deg)`;
+        sec.style.transform = `rotate(${sRotation}deg)`;
+        
+        let dataday = "";
+
+        if(date.getDay() == 0){
+          dataday = "SUN";
+        }
+        else if(date.getDay() == 1){
+          dataday =  "MON";
+        }
+        else if(date.getDay() == 2){
+          dataday = "TUE";
+        }
+        else if(date.getDay() == 3){
+          dataday = "WED";
+        }
+        else if(date.getDay() == 4){
+          dataday = "THU";
+        }
+        else if(date.getDay() == 5){
+          dataday = "FRI";
+        }
+        else if(date.getDay() == 6){
+          dataday = "SAT";
+        }
+        
+        let secData = "";
+        if(ss < 10){
+          secData = `0${ss}`;
+        }else{
+          secData = `${ss}`;
+        }
+
+        let hourData = "";
+        if (hh > 12) {
+          hourData = `${hh - 12}`;
+          if (hourData < 10) {
+            hourData = `0${hourData}`;
+          } else {
+          hourData = `${hourData}`;
+          }
+        } else if (hh === 0) {
+          hourData = "12";
+        } else {
+          hourData = `${hh}`;
+        }
+
+
+        let minData = "";
+        if(mm < 10){
+          minData = `0${mm}`;
+        }else{
+          minData = `${mm}`;
+        }
+
+        var ampm = hh >= 12 ? 'PM' : 'AM';
+        
+        document.querySelector(".day").innerHTML = dataday;
+        document.querySelector(".hours").innerHTML = hourData;
+        document.querySelector(".minutes").innerHTML = minData;
+        document.querySelector(".seconds").innerHTML = secData;
+        document.querySelector(".daytime").innerHTML = ampm;
+      }
+      
+
+      setInterval(displayTime, 1000);
+    </script>
+
+<script>
+  // Get the current date and time
+  var currentDate = new Date();
+  var day = currentDate.getDate();
+  var month = currentDate.getMonth() + 1; // Months are zero-based
+  var year = currentDate.getFullYear();
+  var dateDisplay = day + '  /  ' + month + '  /  ' + year;
+
+  // Display the date
+  document.getElementById('date').innerText = dateDisplay;
+</script>
+
+</body>
+</html>
